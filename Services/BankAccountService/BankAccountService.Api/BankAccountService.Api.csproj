@@ -16,6 +16,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Bank.ServiceDefaults\Bank.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\BankAccountService.Application\BankAccountService.Application.csproj" />
+    <ProjectReference Include="..\BankAccountService.Core\BankAccountService.Core.csproj" />
+    <ProjectReference Include="..\BankAccountService.Infrastructure\BankAccountService.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
