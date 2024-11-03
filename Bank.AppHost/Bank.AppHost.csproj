@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ApiGateways\ApiGateway\ApiGateway.csproj" />
+    <ProjectReference Include="..\Services\BankAccountService\BankAccountService.Api\BankAccountService.Api.csproj" />
   </ItemGroup>
 
 </Project>
