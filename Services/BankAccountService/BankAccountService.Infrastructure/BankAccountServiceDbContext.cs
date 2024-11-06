@@ -1,5 +1,6 @@
 ﻿using BankAccountService.Core.Entities.BankAccountEntities;
 using BankAccountService.Core.Entities.CustomerEntities;
+using BankAccountService.Infrastructure.Builders.BankAccounts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace BankAccountService.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(BankAccountBuilder).Assembly);
         }
     }
 }

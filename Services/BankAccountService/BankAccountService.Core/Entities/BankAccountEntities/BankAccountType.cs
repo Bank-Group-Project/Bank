@@ -12,7 +12,6 @@ namespace BankAccountService.Core.Entities.BankAccountEntities
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public BankAccount BankAccount { get; set; }
-        public long BankAccountId { get; set; }
+        public ICollection<BankAccount> BankAccounts { get; set; } = new HashSet<BankAccount>();
     }
 }
