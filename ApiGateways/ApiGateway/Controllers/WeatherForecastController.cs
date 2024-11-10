@@ -1,8 +1,9 @@
+using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiGateway.Controllers;
 
-[ApiController]
+        [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
