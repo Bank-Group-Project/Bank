@@ -12,8 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\BankAccounts\BankAccountDTOs\Responses\" />
-    <Folder Include="DTOs\BankAccounts\BankAccountDTOs\Requests\" />
     <Folder Include="DTOs\BankAccounts\BankAccountStatusDTOs\Requests\" />
     <Folder Include="DTOs\BankAccounts\BankAccountTypeDTOs\Requests\" />
   </ItemGroup>
