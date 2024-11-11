@@ -11,4 +11,9 @@
     <PackageReference Include="StackExchange.Redis" Version="2.8.16" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\BankAccounts\BankAccountStatusDTOs\Requests\" />
+    <Folder Include="DTOs\BankAccounts\BankAccountTypeDTOs\Requests\" />
+  </ItemGroup>
+
 </Project>

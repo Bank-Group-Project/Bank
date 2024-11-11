@@ -4,6 +4,7 @@ using BankAccountService.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BankAccountService.Infrastructure.Migrations
 {
     [DbContext(typeof(BankAccountServiceDbContext))]
-    partial class BankAccountServiceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241111211407_update-customer")]
+    partial class updatecustomer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
