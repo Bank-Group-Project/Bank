@@ -14,6 +14,9 @@ namespace BankAccountService.Core.Entities.CustomerEntities
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+
         public ICollection<BankAccount> OwnerBankAccounts { get; set; } = new HashSet<BankAccount>();
     }
 }
