@@ -1,6 +1,9 @@
 using BankAccountService.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Asp.Versioning;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
+using BankAccountService.Core.Resources.Localization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +20,7 @@ builder.Services.AddDbContext<BankAccountServiceDbContext>(x => x.UseSqlServer(c
     builder.EnableRetryOnFailure(1, TimeSpan.FromSeconds(5), null);
 }));
 
+builder.Services.AddLocalization();
 builder.Services.AddControllers();
 
 // Versioning
@@ -50,6 +54,21 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+var langCodes = Languages.GetAll();
+var supportedCultures = new List<CultureInfo>(langCodes.Count);
+
+foreach (var langCode in langCodes)
+{
+    supportedCultures.Add(new CultureInfo(langCode));
+}
+
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture(Languages.EN),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
 
 app.UseAuthorization();
 
